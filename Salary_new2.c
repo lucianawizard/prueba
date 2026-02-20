@@ -7,22 +7,31 @@ por horas. Si se pasa de cuarenta horas semanales, las horas
 extraordinarias se pagarán a razón de 1.5 veces la hora normal*/
 
 int main() {
-  int PRECIO_HORA = 40;
-  int HORAS = 45;
-  char NOMBRE[10] = 'milosito';
+
+  char NOMBRE[50];
+  
+  printf("Escriba su nombre: ");
+  scanf("%c", NOMBRE);
+
+  int HORAS;
+
+  printf("Escriba sus horas trabajadas: ");
+  scanf("%d", &HORAS);
+
+  int PRECIO_HORA =20;
   double SALARIO;
   double SALARIO_EXTRA;
 
   if (HORAS <= 40) {
     double SALARIO = PRECIO_HORA * HORAS;
 
-      printf("El salario de: %c\n", NOMBRE);
+      printf("El salario de: %s\n", NOMBRE);
       printf("es: %lf\n", SALARIO);
 
   } else {
     double SALARIO_EXTRA = PRECIO_HORA * 40 + (HORAS - 40) * 1.5;
 
-    printf("El salario de: %c\n", (NOMBRE));
+    printf("El salario de: %s\n", (NOMBRE));
     printf("es: %lf\n", (SALARIO_EXTRA));
   }
 
